@@ -59,10 +59,10 @@
 /* Image Section */
 
 .Images {
-  // @include flex($justify: space-between);
-  // flex-flow:row wrap;
   display: grid;
-  grid-template-columns: repeat(3, auto);
+  grid-template-columns: repeat(3, 31.66vw);
+  grid-gap: 6px;
+  justify-items: center;
   width: 100%;
   margin: 0 auto;
 }
