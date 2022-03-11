@@ -75,17 +75,19 @@
   }
 }
 
-.Image {
+.Image, .LastImage {
   width: 300px;
   height: 400px;
   padding: 15px 7.5px 15px 7.5px;
+  transform: perspective(1000px);
+  transform-style: preserve-3d;
+  transition: transform 200ms cubic-bezier(0.03, 0.98, 0.52, .99);
 }
 
-.LastImage {
-  width: 300px;
-  height: 400px;
-  padding: 15px 7.5px 15px 7.5px;  
+.Image:hover, .LastImage:hover {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
+
 
 @media only screen and (max-width: 600px) {
   .Image, .LastImage {
