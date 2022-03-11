@@ -2,6 +2,7 @@ import '../App.scss';
 import React from 'react'
 import { photos } from '../pArray.js';
 import join from '../assets/images/join.png'
+import mv from '../assets/images/MV-LOGO.png'
 
 
 function SCFImages() {
@@ -18,6 +19,7 @@ function SCFImages() {
         const rotateY = (-1) * 15 * mouseX / (imgWidth / 2)
 
         e.target.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(.95, .95, .95)`
+
     }
 
     function imageMouseLeave(e) {
@@ -31,6 +33,7 @@ function SCFImages() {
                 return <img className="Image" key={photo.id} src={photo.src} alt={photo.alt} onMouseMove={(e) => imageMouseMove(e)} onMouseLeave={(e) => imageMouseLeave(e)}></img>
             })}
             <img className='LastImage' key={10} src={join} alt="join the team" onMouseMove={(e) => imageMouseMove(e)} onMouseLeave={(e) => imageMouseLeave(e)}></img>
+            <img src={mv} className='mvLogo' alt="martha's vineyard stamp"></img>
         </div>
     )
 
